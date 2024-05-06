@@ -24,7 +24,7 @@ foreach(var quote in quotes){
     Console.WriteLine(quote.author); 
 }
 
-using(var writer = new StreamWriter(Environment.GetEnvironmentVariable("PATH")))
+using(var writer = new StreamWriter(Environment.GetEnvironmentVariable("QUOTES_PATH")))
 using(var csv = new CsvWriter(writer, CultureInfo.InvariantCulture)){
     csv.WriteRecords(quotes);
 }
